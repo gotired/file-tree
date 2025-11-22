@@ -10,7 +10,7 @@ need [`rust`](https://rust-lang.org/tools/install/) for compile the code
 cargo build --release
 ```
 
-if we want to use global after compile copy to our local bin
+if we want to use global after compile copy to our local bin (mac)
 
 ```sh
 sudo cp -rv ./target/release/file-tree /usr/local/bin/file-tree
@@ -54,4 +54,10 @@ if we want output as a file
 
 ```sh
 cat example.txt | file-tree > example-output.txt
+```
+
+if we want output to be in out clipboard (mac)
+
+```sh
+cat example.txt | file-tree | pbcopy
 ```
