@@ -40,6 +40,12 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
 
+      - name: Setup Mac Environment
+        if: matrix.os == 'macos-14'
+        run: |
+          echo "SDKROOT=$(xcrun -sdk macosx --show-sdk-path)" >> $GITHUB_ENV
+          echo "MACOSX_DEPLOYMENT_TARGET=12.0" >> $GITHUB_ENV
+
       - name: Add Target Architecture
         run: rustup target add ${{ matrix.target }}
 
