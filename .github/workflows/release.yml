@@ -23,12 +23,8 @@ jobs:
       - name: Build Release
         run: cargo build --release
 
-      - name: Prepare Binary
-        run: |
-          mv target/release/file-tree target/release/file-tree-${{ github.ref_name }}
-
       - name: Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: target/release/file-tree-${{ github.ref_name }}
+          files: target/release/file-tree
