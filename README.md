@@ -24,11 +24,18 @@ which file-tree
 
 Output should be
 
-```
+```sh
 /usr/local/bin/file-tree
 ```
 
 ## To use
+
+download binary file from releases and copy to local bin (mac)
+
+```sh
+sudo cp -rv file-tree-arm64 /usr/local/bin/file-tree &&
+sudo chmod +x file-tree
+```
 
 ### CLI Mode
 
