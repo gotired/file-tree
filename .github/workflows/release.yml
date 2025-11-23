@@ -11,7 +11,7 @@ permissions:
 jobs:
   build:
     name: Build and Release
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         include:
@@ -28,7 +28,7 @@ jobs:
             use_cross: true
 
           # 3. MacOS Apple Silicon
-          - os: macos-14
+          - os: macos-latest
             target: aarch64-apple-darwin
             suffix: mac-arm64
             use_cross: false
