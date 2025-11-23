@@ -40,6 +40,9 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
 
+      - name: Add Target Architecture
+        run: rustup target add ${{ matrix.target }}
+
       - name: Install Cross
         if: matrix.use_cross
         uses: taiki-e/install-action@cross
