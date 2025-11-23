@@ -4,3 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+ratatui = { version = "0.26", features = ["all-widgets"] }
+crossterm = "0.27"
+arboard = "3.3"

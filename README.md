@@ -30,6 +30,8 @@ Output should be
 
 ## To use
 
+### CLI Mode
+
 we can create file change to be `.txt` file
 
 ```sh
@@ -60,4 +62,10 @@ if we want output to be in out clipboard (mac)
 
 ```sh
 cat example.txt | file-tree | pbcopy
+```
+
+### TUI Mode
+
+```sh
+file-tree --tui
 ```
